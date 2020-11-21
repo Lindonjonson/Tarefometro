@@ -54,7 +54,7 @@
         <form>
         <input type="checkbox" id="Pacote_i" name="Pacote" value="" onClick="ativar({{$a['id']}})" checked>
          <a href="{{ route ('atividade.show',$a['id'])}}">Informações |</a>
-         <s>  {{$a['nome']}}</s>
+         <s>  {{$a['nome']}} </s>
 
         @endif
       </form>
