@@ -22,7 +22,7 @@
     @if($atividades['status']==0)
     <a class="btn btn-warning btn-lg" href="{{route('atividades.index')}}" role="button">Desfazer Atividade</a>
     @else
-    <a class="btn btn-primary btn-lg" href="http://127.0.0.1:8000/atividades/update/{{$atividades['id']}}/concluir" role="button">Concluir Atividade</a>
+    <a class="btn btn-primary btn-lg" href="atividades/update/{{$atividades['id']}}/concluir" role="button">Concluir Atividade</a>
     @endif
     
     <form action="{{route('atividade.destroy', $atividades['id']) }}" method="POST">
