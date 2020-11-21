@@ -37,9 +37,9 @@
       </nav>
   </nav>
   <br>
- 
+  <div class="container">
     @yield('conteudo')
-  
+  </div>
 
 
     </div>

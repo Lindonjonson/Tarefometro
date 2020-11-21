@@ -16,7 +16,9 @@
           }
       }
   }
+  
     </script>
+    
 <div class="jumbotron">
     <h1 class="display-4">Cadastre suas tarefas</h1>
 <form action="{{route('atividade.store')}}" method="GET">
@@ -24,11 +26,13 @@
     <p class="lead">
         <div class="input-group input-group-sm mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="inputGroup-sizing-sm">Qual sua proxima tarefa?</span>
+              
+              <span class="input-group-text" id="inputGroup-sizing-sm" >Atividade</span>
             </div>
-            <input type="text" class="form-control" aria-label="Small" name="atividade" aria-describedby="inputGroup-sizing-sm ">
+            <input type="text" class="form-control" aria-label="Small" name="atividade" placeholder="Qual sua proxima?" aria-describedby="inputGroup-sizing-sm ">
             <button type="submit" class="btn btn-outline-dark btn-sm">Cadastrar</button>
           </div>
+      
     </p>
 </form>
 
