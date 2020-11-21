@@ -9,8 +9,7 @@ class gerenciador extends Controller
 {
     private $atividades =[
         ['id'=>1,'nome'=>'Ir a Praia','status'=>1],
-        ['id'=>2,'nome'=>'Jogar Bola','status'=>1],
-        ['id'=>3,'nome'=>'Estudar php','status'=>1],
+        ['id'=>2,'nome'=>'Estudar ','status'=>1],
         ['id'=>4,'nome'=>'Ir para Academia','status'=>1],
     ];
 
