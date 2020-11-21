@@ -10,7 +10,7 @@
               if(pacote[i].value == "Pacote i"){
                /*   var Pacote_i = "Tarefa Concluida Com Sucesso!"+$id;
                   alert($id);*/
-                  window.location.href = "http://127.0.0.1:8000/atividades/update/"+$id+"/concluir"
+                  window.location.href = "atividades/update/"+$id+"/concluir"
 
               }
           }
