@@ -19,12 +19,7 @@
     <hr class="my-4">
     <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
     <a class="btn btn-primary btn-lg" href="{{route('atividades.index')}}" role="button">Voltar</a>
-    @if($atividades['status']==0)
-    <a class="btn btn-warning btn-lg" href="{{route('atividades.index')}}" role="button">Desfazer Atividade</a>
-    @else
-    <a class="btn btn-primary btn-lg" href="update/{{$atividades['id']}}/concluir" role="button">Concluir Atividade</a>
-    @endif
-    
+    <br><br>
     <form action="{{route('atividade.destroy', $atividades['id']) }}" method="POST">
       @csrf
       @method('DELETE') 

@@ -8,9 +8,9 @@ use PhpParser\Node\Expr\FuncCall;
 class gerenciador extends Controller
 {
     private $atividades =[
-        ['id'=>1,'nome'=>'Ir a Praia','status'=>1],
-        ['id'=>2,'nome'=>'Estudar ','status'=>1],
-        ['id'=>4,'nome'=>'Ir para Academia','status'=>1],
+        ['id'=>1,'nome'=>'IR A PRAIA','status'=>1],
+        ['id'=>2,'nome'=>'ESTUDAR ','status'=>1],
+        ['id'=>4,'nome'=>'IR PARA ACADEMIA','status'=>1],
     ];
 
     /**
@@ -51,7 +51,7 @@ class gerenciador extends Controller
      */
     public function store(Request $request)
     {
-        $nome = ucfirst( $request->atividade);
+        $nome = mb_strtoupper( $request->atividade);
         $atividades = session('atividades');
         $conta = count($atividades);
         $status = 1;
@@ -72,7 +72,7 @@ class gerenciador extends Controller
         }
         else{
           $id = 1;
-          $nome = $request->atividade;
+         
           $dados = ["id"=>$id,"nome" => $nome,"status"=>$status];
           $atividades[] = $dados;
           session(['atividades'=>$atividades]);
@@ -143,5 +143,13 @@ class gerenciador extends Controller
         $atividades[ $index]['status'] = 0;
         session(['atividades'=>$atividades]);
         return redirect()->route('atividades.index');
+    }
+    public function desfazer($id){
+        $atividades = session('atividades');
+        $index = $this->getIndex($id, $atividades);
+        $atividades[ $index]['status'] = 1;
+        session(['atividades'=>$atividades]);
+        return redirect()->route('atividades.index');
+        return view('atividades.index', compact(['atividades']));
     }
 }

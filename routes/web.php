@@ -23,3 +23,4 @@ Route::get('atividades/', [gerenciador::class,'store'])->name('atividade.store')
 Route::get('atividades/{atividade}', [gerenciador::class,'show'])->name('atividade.show');
 Route::delete('atividades/{atividade}', [gerenciador::class, 'destroy'])->name('atividade.destroy');
 Route::get('atividades/update/{id}/concluir', [gerenciador::class, 'concluir'])->name('atividades.concluir');
+Route::get('atividades/update/{id}/desfazer', [gerenciador::class, 'desfazer'])->name('atividades.desfazer');

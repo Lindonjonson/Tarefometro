@@ -16,6 +16,18 @@
           }
       }
   }
+  function desfazer($id) {
+    var check = document.getElementsByName("Pacote"); 
+
+    for (var i=0;i<check.length;i++){ 
+        if (check[i].checked == true){ 
+            
+
+        }  else {
+          window.location.href = "atividades/update/"+$id+"/desfazer"
+        }
+    }
+}
   
     </script>
     
@@ -56,7 +68,7 @@
         
         @else 
         <form>
-        <input type="checkbox" id="Pacote_i" name="Pacote" value="" onClick="ativar({{$a['id']}})" checked>
+        <input type="checkbox" id="Pacote_i" name="Pacote" value="" onClick="desfazer({{$a['id']}})" checked>
          <a href="{{ route ('atividade.show',$a['id'])}}">Informações |</a>
          <s>  {{$a['nome']}} </s>
 
